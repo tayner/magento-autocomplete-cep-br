@@ -6,7 +6,7 @@ require([
         // Função ativada ao tirar o foco do input de CEP
         $(document).on("focusout",'input[name="postcode"]', function() {
 
-            var cep = document.getElementsByName("postcode")[0].value;
+            var cep = $('.form-shipping-address input[name="postcode"]').val();
             $.getJSON("https://brasilapi.com.br/api/cep/v1/"+ cep, function(data) {
             
             // Substiruir variaveis conforme a API customizada indique
