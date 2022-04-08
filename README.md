@@ -3,13 +3,19 @@
 - Simples solução para auto-completar campos ao preencher o CEP no campo de endereço.
 - Funcionando no **Checkout**, **Carrinho** e **Perfil** (area de alterar endereço).
 - Usando a [Brasil API](https://github.com/BrasilAPI/BrasilAPI "Brasil API"), podendo ser facilmente substituida por uma de sua escolha.
-- Testado e criado usando Magento 2.3.6
+- Testado e criado usando Magento 2.3.6 porém compatível com Magento 2.4.3
 ## Video
 [![](https://i.imgur.com/1xQXqvW.gif)](https://i.imgur.com/1xQXqvW.gif)
-### Instalação (Apenas manual)
-- Faça o [download](https://github.com/LimaJonas/magento-autocomplete-cep-br/releases "download") do modulo.
-- Em [Magento_Root]/App/Code, crie as pastas Jonaslima/Autocomplete.
-- Extraia arquivos dentro da pasta Autocomplete.
+### Instalação via Composer
+- Adicione o Repositório:
+```
+composer config repositories.tayner-magento-autocomplete-cep-br git git@github.com:tayner/magento-autocomplete-cep-br.git
+```
+- Instale o plugin:
+```
+  composer require tayner/magento-autocomplete-cep-br
+```
+  
 - Execute os comandos:
 
 ```
@@ -33,5 +39,7 @@ var rua = data.street;
 var bairro = data.neighborhood; 
 var cidade = data.city; 
 var uf = data.state;
- 
 ```
+
+## Repositório original do Fork você encontra aqui:
+    https://github.com/LimaJonas/magento-autocomplete-cep-br

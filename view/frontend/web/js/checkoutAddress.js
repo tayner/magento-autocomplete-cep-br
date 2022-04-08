@@ -3,6 +3,10 @@ require([
     'jquery/ui',
 ], function($){
     $(document).ready( function() {
+        $(document).on("focusin",'input[name="postcode"]', function() {
+            jQuery("[name='street[0]']").attr("tabindex", "-1");
+        });
+
         // Função ativada ao tirar o foco do input de CEP
         $(document).on("focusout",'input[name="postcode"]', function() {
 
