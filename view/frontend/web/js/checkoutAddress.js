@@ -4,7 +4,9 @@ require([
 ], function($){
     $(document).ready( function() {
         $(document).on("focusin",'input[name="postcode"]', function() {
-            jQuery("[name='street[0]']").attr("tabindex", "-1");
+            let elementSelected = jQuery("[name='street[0]']");
+            elementSelected.attr("tabindex", "-1");
+            elementSelected.css('pointer-events','none');
         });
 
         // Função ativada ao tirar o foco do input de CEP
